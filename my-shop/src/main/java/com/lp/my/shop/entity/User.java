@@ -1,10 +1,13 @@
 package com.lp.my.shop.entity;
 
-public class UserInfo {
+import javax.naming.directory.SearchResult;
+import java.io.Serializable;
+
+public class User implements Serializable {
 
     private String email;
     private String password;
-    private String name;
+    private String username;
 
     public String getEmail() {
         return email;
@@ -22,20 +25,20 @@ public class UserInfo {
         this.password = password;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     @Override
     public String toString() {
-        return "UserInfo{" +
+        return "User{" +
                 "email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", name='" + name + '\'' +
+                ", username='" + username + '\'' +
                 '}';
     }
 }
