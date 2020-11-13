@@ -5,8 +5,9 @@ import com.lp.my.shop.entity.User;
 import com.lp.my.shop.service.impl.UserServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Repository;
 
-
+@Repository(value = "userDao")
 public class UserDaoImpl implements UserDao{
 
     private static final Logger logger = LoggerFactory.getLogger(UserDaoImpl.class);
@@ -26,6 +27,7 @@ public class UserDaoImpl implements UserDao{
             }
         }
         else {
+            user = null;
             logger.warn("获取 \"{}\" 用户信息失败", email);
         }
         return user;
